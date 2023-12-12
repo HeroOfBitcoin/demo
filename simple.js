@@ -10,7 +10,7 @@
 "use strict";
 
 // User configurable.
-const ROM_FILENAME = 'porklike.gb';
+const ROM_FILENAME = 'Hero_of_Bitcoin_DEMO.gbc';
 const ENABLE_FAST_FORWARD = true;
 const ENABLE_REWIND = true;
 const ENABLE_PAUSE = false;
