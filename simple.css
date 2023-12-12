@@ -6,6 +6,7 @@
  */
 body {
   background: #F2A900;
+  background-image: url('bgimage.jpg');
   color: #000;
   font-family: 'Press Start 2P', sans-serif;                     
   font-weight: 300;
