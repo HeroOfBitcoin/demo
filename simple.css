@@ -23,8 +23,6 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 60%;
-  height: 40%;
   touch-action: none;
 }
 
