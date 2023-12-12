@@ -23,6 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   touch-action: none;
+  width: 60%;
 }
 
 #game canvas {
