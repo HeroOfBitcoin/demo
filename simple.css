@@ -10,7 +10,7 @@ body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
-  margin: 0;  /* binjgb */
+  margin: 15;  /* binjgb */
   padding: 0;  /* binjgb */
   touch-action: none;
   -webkit-touch-callout: none;
@@ -23,8 +23,6 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 80%;
-  height: 80%;
   touch-action: none;
 }
 
@@ -214,7 +212,7 @@ body {
 @media only screen and (max-device-width: 300px) and (orientation: landscape) {
   html,
   body {
-    height: 100%;
+    height: 80%;
   }
   body {
     display: flex;
