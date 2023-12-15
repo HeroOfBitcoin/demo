@@ -5,9 +5,9 @@
  * modifications are marked with binjgb below.
  */
 body {
-  background: #031921;
+  background: #FF9900;
   color: #fff;
-  font-family: 'Press Start 2P', sans-serif;  
+  font-family: 'Press Start 2P', sans-serif; 
   font-weight: 300;
   margin: 0;  /* binjgb */
   padding: 0;  /* binjgb */
@@ -40,7 +40,7 @@ body {
   position: fixed;
   bottom: 0px;
   height: 210px;
-  width: 100%;
+  width: 60%;
   touch-action: none;
   opacity: 0.8;
 }
