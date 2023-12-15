@@ -22,8 +22,8 @@ body {
 #game {
   display: inline-block;
   position: absolute;
-  width: 100vw;
-  height: 90vw;
+  width: 90vw;
+  height: 81vw;
   touch-action: none;
 }
 
