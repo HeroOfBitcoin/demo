@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 50%;
+  width: 60%;
   height: 100%;
   touch-action: none;
 }
@@ -39,6 +39,7 @@
 
 #controller {
   display: none;
+  position: fixed;
   bottom: 0px;
   height: 210px;
   width: 100%;
