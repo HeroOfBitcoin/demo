@@ -13,7 +13,12 @@ https://github.com/chrismaltby/gb-studio/blob/v2beta/appData/js-emulator/index.h
 </head>
 <body>
   <div id="game">
-    <canvas id="mainCanvas" width="160" height="144">No Canvas Support</canvas>
+    <!-- <canvas id="mainCanvas" width="160" height="144">No Canvas Support</canvas> -->
+    <canvas
+    v-bind:width="canvasWidth" v-bind:height="canvasHeight"
+    v-show="canvas.show"
+    v-bind:style="{width:canvasWidthPx, height:canvasHeightPx}">
+ </canvas>
   </div>
   <div id="controller">
     <div id="controller_dpad">
