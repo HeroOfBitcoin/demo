@@ -22,12 +22,12 @@ body {
 #game {
   display: inline-block;
   position: absolute;
-  height: 65vw;
+  height: 70vw;
   touch-action: none;
 }
 
 #game canvas {
-  height: 65vw;
+  width: 80vw;
   /* Make sure border doesn't shrink the content size, since we want the
      pixels to scale properly. */
   box-sizing: content-box;
