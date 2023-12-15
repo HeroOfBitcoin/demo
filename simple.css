@@ -38,8 +38,7 @@
 }
 
 #controller {
-  display: none;
-  position: fixed;
+  display: none;s
   bottom: 0px;
   height: 210px;
   width: 100%;
