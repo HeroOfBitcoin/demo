@@ -32,7 +32,6 @@ const REWIND_UPDATE_MS = 16;
 const BUILTIN_PALETTES = 84;  // See builtin-palettes.def.
 const GAMEPAD_POLLING_INTERVAL = 1000 / 60 / 4; // When activated, poll for gamepad input about ~4 times per gameboy frame (~240 times second)
 const GAMEPAD_KEYMAP_STANDARD_STR = "standard"; // Try to use "standard" HTML5 mapping config if available
-const ROM_FILENAME = 'roms/Hero_of_Bitcoin_DEMO.gbc';
 
 const $ = document.querySelector.bind(document);
 let emulator = null;
@@ -46,11 +45,10 @@ const dbPromise = idb.open('db', 1, upgradeDb => {
 
 function readFile(file) {
   return new Promise((resolve, reject) => {
-    let response = ROM_FILENAME;
-    let romBuffer = response.arrayBuffer();
-    const extRam = new Uint8Array(JSON.parse(localStorage.getItem('extram')));
-    Emulator.start(binjgbPromise, romBuffer, extRam);
-    emulator.setBuiltinPalette(vm.palIdx);
+    const reader = new FileReader();
+    reader.onerror = event => reject(event.error);
+    reader.onloadend = event => resolve(event.target.result);
+    reader.readAsArrayBuffer(file);
   });
 }
 
