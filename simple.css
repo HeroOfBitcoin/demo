@@ -6,10 +6,9 @@
  */
 body {
   background: #031921;
-  color: #fff;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
+  color: #000;
+  font-family: 'Press Start 2P', sans-serif;    
+  font-weight: 200;
   margin: 0;  /* binjgb */
   padding: 0;  /* binjgb */
   touch-action: none;
