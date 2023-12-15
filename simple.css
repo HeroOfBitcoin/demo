@@ -4,11 +4,12 @@
  *
  * modifications are marked with binjgb below.
  */
-body {
-  background: #031921;
+ body {
+  background-image: url(bgimage.png);
+  background-repeat: no-repeat;
+  background-size: contain;
   color: #fff;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: 'Press Start 2P', sans-serif;                                               
   font-weight: 300;
   margin: 0;  /* binjgb */
   padding: 0;  /* binjgb */
@@ -23,7 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 100%;
+  width: 50%;
   height: 100%;
   touch-action: none;
 }
