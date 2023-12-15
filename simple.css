@@ -28,8 +28,8 @@ body {
 }
 
 #game canvas {
-  width: 600px;
-  height: 540px;
+  width: 30vw;
+  height: 27vw;
   /* Make sure border doesn't shrink the content size, since we want the
      pixels to scale properly. */
   box-sizing: content-box;
