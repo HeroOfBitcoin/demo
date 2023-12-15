@@ -20,11 +20,10 @@ body {
 }
 
 #game {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 85%;
-  height: 40%;
+  display: inline-block;
+  position: absolute;
+  width: 95%;
+  height: 80%;
   touch-action: none;
 }
 
