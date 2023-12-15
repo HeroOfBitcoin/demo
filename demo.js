@@ -46,10 +46,10 @@ const dbPromise = idb.open('db', 1, upgradeDb => {
 
 function readFile(file) {
   return new Promise((resolve, reject) => {
-    let response = await fetch(ROM_FILENAME);
-    let romBuffer = await response.arrayBuffer();
+    let response = ROM_FILENAME;
+    let romBuffer = response.arrayBuffer();
     const extRam = new Uint8Array(JSON.parse(localStorage.getItem('extram')));
-    Emulator.start(await binjgbPromise, romBuffer, extRam);
+    Emulator.start(binjgbPromise, romBuffer, extRam);
     emulator.setBuiltinPalette(vm.palIdx);
   });
 }
