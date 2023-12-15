@@ -9,7 +9,7 @@ body {
   color: #000;
   font-family: 'Press Start 2P', sans-serif;    
   font-weight: 200;
-  margin: 0;  /* binjgb */
+  margin: 25;  /* binjgb */
   padding: 0;  /* binjgb */
   vertical-align: bottom;
   touch-action: none;
@@ -23,7 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 95%;
+  width: 85%;
   height: 80%;
   touch-action: none;
 }
