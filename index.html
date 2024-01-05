@@ -1,37 +1,68 @@
 <!DOCTYPE html>
-<!-- copied from
-https://github.com/chrismaltby/gb-studio/blob/v2beta/appData/js-emulator/index.html
-(see LICENSE.gbstudio)
--->
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="simple.css">
-  <link href="https://fonts.cdnfonts.com/css/press-start-2p" rel="stylesheet">
-  <title>binjgb (simple)</title>
-</head>
-<body>
-  <div id="game">
-    <!-- <canvas id="mainCanvas" width="160" height="144">No Canvas Support</canvas> -->
-    <canvas id="mainCanvas"
-    v-bind:width="canvasWidth" v-bind:height="canvasHeight"
-    v-show="canvas.show"
-    v-bind:style="{width:canvasWidthPx, height:canvasHeightPx}">
- </canvas>
-  </div>
-  <div id="controller">
-    <div id="controller_dpad">
-      <div id="controller_left"></div>
-      <div id="controller_right"></div>
-      <div id="controller_up"></div>
-      <div id="controller_down"></div>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  <body>
+    <div id="canvas_container">
+      <canvas id="mainCanvas" width="640" height="576">No Canvas Support</canvas>
     </div>
-    <div id="controller_select" class="capsuleBtn">Select</div>
-    <div id="controller_start" class="capsuleBtn">Start</div>
-    <div id="controller_b" class="roundBtn">B</div>
-    <div id="controller_a" class="roundBtn">A</div>
-  </div>
-  <script src="binjgb.js"></script>
-  <script src="simple.js"></script>
-</body>
+      <div id="systembuttons">
+        <div class="button upload">upload rom</div>
+        <input type="file" id="uploadrom" accept=".gb,.gbc" style="display:none" onchange="uploadRom(this.files)" />
+      </div>
+    <div id="buttons">
+      <div id="leftbuttons">
+        <div id="dpad">
+          <div class="button up" data-button="up"></div>
+          <div class="button down" data-button="down"></div>
+          <div class="button left" data-button="left"></div>
+          <div class="button right" data-button="right"></div>
+          <div class="center"></div>
+        </div>
+      </div>
+      <div id="rightbuttons">
+        <div id="ab">
+          <div class="button a" data-button="a"><div>a</div></div>
+          <div class="button b" data-button="b"><div>b</div></div>
+        </div>
+      </div>
+      <div id="bottombuttons">
+        <div id="startselect">
+          <div class="button start" data-button="start"><div>start</div></div>
+          <div class="button select" data-button="select"><div>select</div></div>
+        </div>
+      </div>
+    </div>
+    <div id="instructions">
+      CONTROLS <br/>
+      <p>
+        <span>a : B</span>
+        <span>s : A</span>
+        <span>arrows : DPAD</span>
+        <span>enter : START</span>
+        <span>right shift : SELECT</span>
+      </p>
+      <p>
+        play one of my roms:
+        <a href="#helicopter" onclick="location.hash = '#helicopter'; location.reload();">helicopter</a> |
+        <a href="#glitchshooter" onclick="location.hash = '#glitchshooter'; location.reload();">glitch shooter</a>
+      </p>
+      <p>
+        follow me on twitter: <a href="//twitter.com/imjayhay" target="_blank">@imjayhay</a> <br/>
+        fork me on github: <a href="//github.com/jhayley/gameboy-web">jhayley/gameboy-web</a>
+      </p>
+    </div>
+    <script src="js/emurunner.js"></script>
+    <script src="js/emulator/other/base64.js"></script>
+    <script src="js/emulator/other/json2.js"></script>
+    <script src="js/emulator/other/swfobject.js"></script>
+    <script src="js/emulator/other/resampler.js"></script>
+    <script src="js/emulator/other/XAudioServer.js"></script>
+    <script src="js/emulator/other/resize.js"></script>
+    <script src="js/emulator/GameBoyCore.js"></script>
+    <script src="js/emulator/GameBoyIO.js"></script>
+  </body>
+</html>
