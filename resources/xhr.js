@@ -1,1 +1,0 @@
-function loadRom(b,c){var a=new XMLHttpRequest;a.open('GET',b),a.responseType='arraybuffer',a.onload=function(){c(a.response)},a.send()}function loadLocalFile(b,c){var a=new XMLHttpRequest;a.open('GET',b),a.responseType='blob',a.onload=function(){a.status==200?c(a.response):console.log('Your fetch has failed, please check with your server owner')},a.send()}
