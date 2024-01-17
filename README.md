@@ -30,12 +30,13 @@ Learn more about the game and development process at [Website].
 
 ### License
 
-All EmulatorJS code [License] GNU General Public License v3.0 https://github.com/EmulatorJS/EmulatorJS/blob/main/LICENSE. All Hero of Bitcoin related modifications [License].
+All EmulatorJS code GNU GPL v3.0 [EmuLicense]. All Hero of Bitcoin related modifications GNU GPL v3.0 [License].
 
 
 <!-- QUICKLINKS --->
 
 [License]: LICENSE.md
+[EmuLicense]: https://github.com/EmulatorJS/EmulatorJS/blob/main/LICENSE
 [Issue]: https://github.com/heroofbitcoin/demo/issues
 [Website]: https://geyser.fund/project/heroofbitcoin
 [Demo]: https://heroofbitcoin.github.io/demo/
