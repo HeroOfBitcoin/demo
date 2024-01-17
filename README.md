@@ -20,6 +20,10 @@ Enjoy! Any feedback is highly appreciated!
 
 <br>
 
+### Running locally
+
+You can download this repository and play Hero of Bitcoin locally. Open [index.html][index.html] to start the game.
+
 ### Issues
 
 *If something doesn't work, please consider opening an* ***[Issue]*** *with as many details as possible.*
@@ -36,6 +40,7 @@ All EmulatorJS code GNU GPL v3.0 [LICENSE][EmuLicense]. All Hero of Bitcoin rela
 <!-- QUICKLINKS --->
 
 [License]: LICENSE.md
+[Index]: index.html
 [EmuLicense]: https://github.com/EmulatorJS/EmulatorJS/blob/main/LICENSE
 [Issue]: https://github.com/heroofbitcoin/demo/issues
 [Website]: https://geyser.fund/project/heroofbitcoin
