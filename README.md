@@ -5,7 +5,7 @@
 
 [![Button Website]][Website] 
 [![Button Demo]][Demo] 
-[!Badge License][License]
+[![Badge License]][License]
 
 Join our Discord [Discord](https://discord.com/invite/HpqAgSVm6M).
 
