@@ -14,7 +14,7 @@ Join our Discord [Discord](https://discord.com/invite/HpqAgSVm6M).
 
 This is the 1st public release of the playable Hero of Bitcoin Game Boy game rom. It should run on any original Game Boy hardware, modern emulators and recent flash carts.
 
-The most recent version is always available online at https://heroofbitcoin.github.io/demo/.
+The most recent version is always available online at https://heroofbitcoin.github.io/demo/ and also has the ROM download.
 
 Enjoy! Any feedback is highly appreciated!
 
