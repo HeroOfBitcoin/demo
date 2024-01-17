@@ -30,6 +30,8 @@ Enjoy! Any feedback is highly appreciated!
 
 Learn more about the game and development process at [![Button Website]][Website].	
 
+### License
+
 All EmulatorJS code [![Badge License]][License] GNU General Public License v3.0 https://github.com/EmulatorJS/EmulatorJS/blob/main/LICENSE 
 All Hero of Bitcoin related modifications [![Badge License]][License]
 
@@ -42,3 +44,4 @@ All Hero of Bitcoin related modifications [![Badge License]][License]
 [Demo]: https://heroofbitcoin.github.io/demo/
 [Button Demo]: https://img.shields.io/badge/Demo-528116?style=for-the-badge
 [Button Website]: https://img.shields.io/badge/Website-736e9b?style=for-the-badge
+[Badge License]: https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge
