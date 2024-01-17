@@ -6,9 +6,7 @@
 [![Button Website]][Website] 
 [![Button Demo]][Demo] 
 
-Join our Discord server:
-
-[![Join our Discord server!](https://discord.com/invite/HpqAgSVm6M)
+Join our Discord [Discord](https://discord.com/invite/HpqAgSVm6M).
 
 </div>
 <br>
@@ -28,7 +26,7 @@ Enjoy! Any feedback is highly appreciated!
 
 <br>
 
-Learn more about the game and development process at [![Button Website]][Website].	
+Learn more about the game and development process at [Website].	
 
 ### License
 
