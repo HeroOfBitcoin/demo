@@ -26,11 +26,11 @@ Enjoy! Any feedback is highly appreciated!
 
 <br>
 
-Learn more about the game and development process at [!Geyser][Website].	
+Learn more about the game and development process at [Geyser][Website].	
 
 ### License
 
-All EmulatorJS code GNU GPL v3.0 [EmuLicense]. All Hero of Bitcoin related modifications GNU GPL v3.0 [License].
+All EmulatorJS code GNU GPL v3.0 [LICENSE][EmuLicense]. All Hero of Bitcoin related modifications GNU GPL v3.0 [LICENSE][License].
 
 
 <!-- QUICKLINKS --->
