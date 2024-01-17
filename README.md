@@ -26,7 +26,7 @@ Enjoy! Any feedback is highly appreciated!
 
 <br>
 
-Learn more about the game and development process at [Website].	
+Learn more about the game and development process at [!Geyser][Website].	
 
 ### License
 
