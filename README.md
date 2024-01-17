@@ -22,8 +22,7 @@ Enjoy! Any feedback is highly appreciated!
 
 ### Issues
 
-*If something doesn't work, please consider opening an* ***[Issue]*** <br>
-*with as many details as possible.*
+*If something doesn't work, please consider opening an* ***[Issue]*** *with as many details as possible.*
 
 <br>
 
