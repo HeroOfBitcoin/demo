@@ -22,7 +22,7 @@ Enjoy! Any feedback is highly appreciated!
 
 ### Running locally
 
-You can download this repository and play Hero of Bitcoin locally. Open [index.html][index.html] to start the game.
+You can download this repository and play Hero of Bitcoin locally. Open [index.html][Index] to start the game.
 
 ### Issues
 
