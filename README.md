@@ -5,6 +5,7 @@
 
 [![Button Website]][Website] 
 [![Button Demo]][Demo] 
+[!Badge License][License]
 
 Join our Discord [Discord](https://discord.com/invite/HpqAgSVm6M).
 
@@ -30,8 +31,7 @@ Learn more about the game and development process at [Website].
 
 ### License
 
-All EmulatorJS code [![Badge License]][License] GNU General Public License v3.0 https://github.com/EmulatorJS/EmulatorJS/blob/main/LICENSE 
-All Hero of Bitcoin related modifications [![Badge License]][License]
+All EmulatorJS code [License] GNU General Public License v3.0 https://github.com/EmulatorJS/EmulatorJS/blob/main/LICENSE. All Hero of Bitcoin related modifications [License].
 
 
 <!-- QUICKLINKS --->
