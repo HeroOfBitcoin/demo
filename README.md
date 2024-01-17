@@ -35,7 +35,7 @@ All EmulatorJS code [License] GNU General Public License v3.0 https://github.com
 
 <!-- QUICKLINKS --->
 
-[License]: LICENSE
+[License]: LICENSE.md
 [Issue]: https://github.com/heroofbitcoin/demo/issues
 [Website]: https://geyser.fund/project/heroofbitcoin
 [Demo]: https://heroofbitcoin.github.io/demo/
