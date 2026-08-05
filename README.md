@@ -1,6 +1,15 @@
 Hero of Bitcoin - Conference Demo Package
 ==========================================
 
+Run the repository verification from this directory with:
+
+```bash
+npm run verify
+python3 -m http.server 8080
+```
+
+Then open <http://127.0.0.1:8080>. The page is self-contained; the standalone ROM is retained as a canonical artifact identity and for emulator use.
+
 © Hero of Bitcoin — All rights reserved.
 
 The Hero of Bitcoin game ROM, emulator implementation, web interface, build system,
