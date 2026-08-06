@@ -7,6 +7,7 @@ const root = new URL('../', import.meta.url);
 const index = await readFile(new URL('index.html', root), 'utf8');
 const rom = await readFile(new URL('rom/HeroOfBitcoin_DEMO.gb', root));
 const favicon = await readFile(new URL('favicon.ico', root));
+const health = JSON.parse(await readFile(new URL('healthz.json', root), 'utf8'));
 
 test('canonical demo ROM identity is unchanged', () => {
   assert.equal(rom.length, 1_048_576);
@@ -39,4 +40,12 @@ test('player-facing controls remain wired', () => {
   for (const code of ['Enter', 'KeyZ', 'KeyX', 'ArrowLeft', 'ArrowRight', 'KeyP', 'KeyF']) {
     assert.match(index, new RegExp(`case "${code}"`));
   }
+});
+
+test('production root exposes a stable health descriptor', () => {
+  assert.deepEqual(health, {
+    ok: true,
+    service: 'hero-of-bitcoin-browser-demo',
+    schema_version: 1,
+  });
 });
