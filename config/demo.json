@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "uiLanguages": [
+    "en",
+    "es",
+    "it",
+    "ja",
+    "de",
+    "ko",
+    "fr",
+    "nl",
+    "fi"
+  ],
+  "gameLanguages": [
+    "en",
+    "nl",
+    "fi"
+  ],
+  "defaultLanguage": "en",
+  "websiteUrl": "https://heroofbitcoin.xyz/",
+  "purchaseUrl": "https://heroofbitcoin.xyz/digital/",
+  "purchaseSource": "demo",
+  "languageStorageKey": "hob-language",
+  "gameLanguageStorageKey": "hob-demo-game-language",
+  "savePrefix": "hero-of-bitcoin/demo/save/",
+  "frameRate": 59.727500569606,
+  "maximumCatchUpFrames": 4,
+  "trailerUrl": "https://youtu.be/IBqAaWS--Bg",
+  "offlineFilename": "index.html"
+}

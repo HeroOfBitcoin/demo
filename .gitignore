@@ -1,5 +1,6 @@
 
 .DS_Store
 node_modules/
-.state/todo_local.md
+.state/
+.playwright-cli/
 output/
