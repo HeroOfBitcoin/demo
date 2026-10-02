@@ -19,31 +19,40 @@
 </head>
 <body>
 <!-- 2. Interface: language selection, game display and local controls. -->
+<a class="skip-link" href="#main-content" data-copy="skipToContent">Skip to content</a>
 <header class="site-header">
-  <a data-home href="https://heroofbitcoin.xyz/" aria-label="Hero of Bitcoin"><img src="{{LOGO}}" width="1280" height="312" alt="Hero of Bitcoin" /></a>
-  <label class="language"><span data-copy="language">Language</span><select id="languagePicker" aria-label="Language"></select></label>
+  <div class="brands">
+    <a data-home href="https://heroofbitcoin.xyz/" aria-label="Hero of Bitcoin"><img class="hob-logo" src="{{LOGO}}" width="1280" height="312" alt="Hero of Bitcoin" /></a>
+    <a class="event event-brand" hidden target="_blank" rel="noopener noreferrer"><img src="{{PLANB}}" width="240" height="58" alt="Plan ₿ Forum · Lugano 2026" /></a>
+  </div>
+  <div class="language-settings">
+    <label class="language"><span data-copy="language">Interface language</span><select id="languagePicker" aria-label="Interface language"></select></label>
+    <label class="game-language"><span data-copy="gameLanguage">Game language</span><select id="gameLanguagePicker" aria-label="Game language"></select></label>
+  </div>
 </header>
-<main>
+<main id="main-content" tabindex="-1">
   <section class="demo-hero" aria-labelledby="demo-title">
     <div class="demo-copy">
       <p class="eyebrow" data-copy="eyebrow">Browser demo</p>
-      <p class="event" hidden>Plan ₿ Forum · Lugano 2026</p>
       <h1 id="demo-title" data-copy="heading">Your Bitcoin adventure starts here.</h1>
       <p class="intro" data-copy="intro">Explore the airport and first town. The demo ends when you leave the town.</p>
-      <label class="game-language"><span data-copy="gameLanguage">Game language</span><select id="gameLanguagePicker" aria-label="Game language"></select></label>
       <button class="primary" id="playButton" data-copy="play">Play the demo</button>
+      <div class="demo-actions">
+        <a class="trailer-link" data-trailer data-copy="trailer" hidden target="_blank" rel="noopener noreferrer">Watch the release trailer ↗</a>
+        <a class="full-link" data-purchase data-copy="full" href="https://heroofbitcoin.xyz/digital/">Get the full game →</a>
+      </div>
+      <div class="offline-offer">
       <a class="offline-link" href="#" id="offlineDownload" data-copy="offline">Download the offline demo</a>
       <p class="fine" data-copy="offlineHint">One HTML file. Open it in a desktop browser to play without internet.</p>
-      <a class="trailer-link" data-trailer data-copy="trailer" hidden target="_blank" rel="noopener noreferrer">Watch the release trailer ↗</a>
-      <a class="full-link" data-purchase data-copy="full" href="https://heroofbitcoin.xyz/digital/">Get the full game →</a>
+      </div>
     </div>
-    <section class="player" aria-label="Hero of Bitcoin demo" id="player">
+    <section class="player" aria-labelledby="demo-title" id="player">
       <div class="canvas-container no-scanlines">
-        <canvas id="canvas" width="160" height="144" tabindex="0" aria-label="Hero of Bitcoin game"></canvas>
+        <canvas id="canvas" width="160" height="144" tabindex="0" aria-label="Hero of Bitcoin game" data-copy-aria="play"></canvas>
         <button id="startOverlay" class="start-overlay"><img src="{{AIRPORT}}" width="160" height="144" alt="" /><span><span aria-hidden="true">▶</span> <strong data-copy="play">Play the demo</strong></span></button>
       </div>
       <div class="player-status" role="status" aria-live="polite" id="playerStatus"></div>
-      <div class="controls" aria-label="Player controls">
+      <div class="controls" aria-label="Player controls" data-copy-aria="controls">
         <button id="pauseToggle" data-copy="pause" disabled>Pause</button>
         <button id="restartButton" data-copy="restart" disabled>Restart</button>
         <button id="exitButton" data-copy="exit" disabled>Exit demo</button>
@@ -51,12 +60,12 @@
         <button id="scanlinesToggle" data-copy="scanlines" aria-pressed="false">Scanlines</button>
         <button id="fullscreenToggle" data-copy="fullscreen">Fullscreen</button>
       </div>
-      <div class="touch-controls" aria-label="Game controls">
+      <div class="touch-controls" aria-label="Game controls" data-copy-aria="controls">
         <div class="dpad"><button data-button="up" aria-label="↑">↑</button><button data-button="left" aria-label="←">←</button><button data-button="down" aria-label="↓">↓</button><button data-button="right" aria-label="→">→</button></div>
         <div class="touch-system"><button data-button="select">SELECT</button><button data-button="start">START</button></div>
         <div class="touch-actions"><button data-button="b">B</button><button data-button="a">A</button></div>
       </div>
-      <details class="key-bindings"><summary data-copy="controls">Controls</summary><p><span data-copy="move">Move</span>: ↑ ↓ ← → · A: X · B: Z · START: Enter · SELECT: Shift</p><p><span data-copy="pause">Pause</span>: P · <span data-copy="fullscreen">Fullscreen</span>: F · <span data-copy="sound">Sound</span>: M · <span data-copy="scanlines">Scanlines</span>: S</p></details>
+      <details class="key-bindings" open><summary data-copy="controls">Controls</summary><p><span data-copy="move">Move</span>: ↑ ↓ ← → · A: X · B: Z · START: Enter · SELECT: Shift</p><p><span data-copy="pause">Pause</span>: P · <span data-copy="fullscreen">Fullscreen</span>: F · <span data-copy="sound">Sound</span>: M · <span data-copy="scanlines">Scanlines</span>: S</p></details>
       <!-- The ROM signals completion on leaving the first town. Purchase is optional navigation. -->
       <section id="demoComplete" class="completion" hidden aria-labelledby="completionTitle">
         <div class="completion-copy"><img class="completion-art" src="{{COMPLETION_ART}}" width="40" height="16" alt="" /><h2 id="completionTitle" data-copy="completeTitle">Thanks for playing!</h2><p data-copy="completeText">Your adventure continues in the full game for Windows, macOS or Linux.</p><a class="primary" data-purchase data-copy="full" href="https://heroofbitcoin.xyz/digital/">Get the full game →</a><button class="return" id="completionRestart" data-copy="restart">Restart</button></div>

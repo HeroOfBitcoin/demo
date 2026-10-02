@@ -26,5 +26,11 @@
   "frameRate": 59.727500569606,
   "maximumCatchUpFrames": 4,
   "trailerUrl": "https://youtu.be/IBqAaWS--Bg",
-  "offlineFilename": "index.html"
+  "offlineFilename": "index.html",
+  "events": {
+    "lugano": {
+      "pageUrl": "https://heroofbitcoin.xyz/lugano/",
+      "websiteUrl": "https://planb.lugano.ch/planb-forum/"
+    }
+  }
 }

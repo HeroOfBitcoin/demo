@@ -34,6 +34,8 @@ function chooseLanguage(values, explicit, key) {
 const initialUrl = new URL(window.location.href);
 const hostedPage = initialUrl.protocol === 'http:' || initialUrl.protocol === 'https:';
 const offlineChoice = JSON.parse(document.getElementById('offline-choice').textContent);
+const eventCode = initialUrl.searchParams.get('event') || offlineChoice.event;
+const eventConfig = Object.hasOwn(demoConfig.events, eventCode) ? demoConfig.events[eventCode] : null;
 language = chooseLanguage(demoConfig.uiLanguages, initialUrl.searchParams.get('lang') || offlineChoice.ui, demoConfig.languageStorageKey);
 gameLanguage = chooseLanguage(demoConfig.gameLanguages, initialUrl.searchParams.get('game') || offlineChoice.game || initialUrl.searchParams.get('lang'), demoConfig.gameLanguageStorageKey);
 function copy() { return demoCatalog[language]; }
@@ -41,7 +43,7 @@ function purchaseUrl() {
   const url = new URL(demoConfig.purchaseUrl);
   url.searchParams.set('lang', language);
   url.searchParams.set('source', demoConfig.purchaseSource);
-  if (initialUrl.searchParams.get('event') === 'lugano') url.searchParams.set('event', 'lugano');
+  if (eventConfig) url.searchParams.set('event', eventCode);
   return url.href;
 }
 function applyCopy() {
@@ -50,6 +52,7 @@ function applyCopy() {
   document.title = 'Hero of Bitcoin | ' + texts.eyebrow;
   document.querySelector('meta[name=description]').content = texts.intro;
   document.querySelectorAll('[data-copy]').forEach((node) => { node.textContent = texts[node.dataset.copy]; });
+  document.querySelectorAll('[data-copy-aria]').forEach((node) => { node.setAttribute('aria-label', texts[node.dataset.copyAria]); });
   languagePicker.value = language;
   gameLanguagePicker.value = gameLanguage;
   languagePicker.setAttribute('aria-label', texts.language);
@@ -58,8 +61,10 @@ function applyCopy() {
   document.querySelector('[data-trailer]').href = demoConfig.trailerUrl;
   document.querySelector('[data-trailer]').hidden = !hostedPage;
   document.getElementById('offlineDownload').hidden = !hostedPage;
-  document.querySelector('[data-home]').href = demoConfig.websiteUrl + '?lang=' + language;
-  document.querySelector('.event').hidden = initialUrl.searchParams.get('event') !== 'lugano';
+  document.querySelector('[data-home]').href = (eventConfig?.pageUrl || demoConfig.websiteUrl) + '?lang=' + language;
+  const eventBrand = document.querySelector('.event');
+  eventBrand.hidden = !eventConfig;
+  if (eventConfig) eventBrand.href = eventConfig.websiteUrl;
   updateControls();
   if (completed) renderQr();
   const url = new URL(window.location.href);
@@ -247,7 +252,7 @@ document.getElementById('offlineDownload').addEventListener('click', async (even
   try {
     const response = await fetch(window.location.href.split('#')[0], { cache: 'no-store' });
     if (!response.ok) throw Error('Offline HTML unavailable');
-    const source = (await response.text()).replace(/(<script id="offline-choice" type="application\/json">)[\s\S]*?(<\/script>)/, (_, open, close) => open + JSON.stringify({ ui: language, game: gameLanguage }) + close);
+    const source = (await response.text()).replace(/(<script id="offline-choice" type="application\/json">)[\s\S]*?(<\/script>)/, (_, open, close) => open + JSON.stringify({ ui: language, game: gameLanguage, ...(eventConfig ? { event: eventCode } : {}) }) + close);
     const blob = new Blob([source], { type: 'text/html;charset=utf-8' });
     const href = URL.createObjectURL(blob);
     const link = document.createElement('a'); link.href = href; link.download = demoConfig.offlineFilename; link.click();

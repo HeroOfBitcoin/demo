@@ -29,7 +29,7 @@ let styles = await read('src/demo.css');
 styles = styles.replace('{{FONT_LATIN}}', await dataUrl('src/assets/inter-latin.woff2', 'font/woff2')).replace('{{FONT_EXT}}', await dataUrl('src/assets/inter-latin-ext.woff2', 'font/woff2'));
 const emulator = `(function(localStorage) {\n${await read('src/vendor/emulator.js')}\nwindow.HobEmulator = { GameBoy, Display, Sound };\n})(demoSaveStorage);`;
 const substitutions = {
-  STYLES: styles, LOGO: await dataUrl('src/assets/logo.webp', 'image/webp'), AIRPORT: await dataUrl('src/assets/airport.png', 'image/png'), COMPLETION_ART: await dataUrl('src/assets/completion-art.png', 'image/png'),
+  PLANB: await dataUrl('src/assets/planb-forum-2026.svg', 'image/svg+xml'), STYLES: styles, LOGO: await dataUrl('src/assets/logo.webp', 'image/webp'), AIRPORT: await dataUrl('src/assets/airport.png', 'image/png'), COMPLETION_ART: await dataUrl('src/assets/completion-art.png', 'image/png'),
   FAVICON: (await read('favicon.ico', null)).toString('base64'), PAKO: await read('src/vendor/pako.js'), EMULATOR: emulator,
   STORAGE: await read('src/storage.js'), QR: qr, CONFIG: JSON.stringify(config), CATALOG: JSON.stringify(catalog), GAMES: JSON.stringify(games), PLAYER: await read('src/player.js'),
   NOTICES: notices.join('\n\n'),

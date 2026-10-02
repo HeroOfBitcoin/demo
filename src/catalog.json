@@ -1,6 +1,6 @@
 {
   "en": {
-    "language": "Language",
+    "language": "Interface language",
     "eyebrow": "Browser demo",
     "heading": "Your Bitcoin adventure starts here.",
     "intro": "Explore the airport and first town. The demo ends when you leave the town.",
@@ -25,10 +25,11 @@
     "phone": "Open checkout on your phone",
     "legal": "Game Boy is named only to describe compatibility. All trademarks belong to their owners.",
     "exit": "Exit demo",
-    "trailer": "Watch the release trailer ↗"
+    "trailer": "Watch the release trailer ↗",
+    "skipToContent": "Skip to content"
   },
   "de": {
-    "language": "Sprache",
+    "language": "Oberflächensprache",
     "eyebrow": "Browser-Demo",
     "heading": "Dein Bitcoin-Abenteuer beginnt hier.",
     "intro": "Erkunde den Flughafen und die erste Stadt. Beim Verlassen der Stadt endet die Demo.",
@@ -53,10 +54,11 @@
     "phone": "Kaufabschluss auf deinem Handy öffnen",
     "legal": "Game Boy wird nur zur Beschreibung der Kompatibilität genannt. Alle Marken gehören ihren jeweiligen Eigentümern.",
     "exit": "Demo beenden",
-    "trailer": "Release-Trailer ansehen ↗"
+    "trailer": "Release-Trailer ansehen ↗",
+    "skipToContent": "Zum Inhalt"
   },
   "it": {
-    "language": "Lingua",
+    "language": "Lingua dell’interfaccia",
     "eyebrow": "Demo nel browser",
     "heading": "La tua avventura Bitcoin inizia qui.",
     "intro": "Esplora l’aeroporto e la prima città. La demo termina quando lasci la città.",
@@ -81,10 +83,11 @@
     "phone": "Apri il pagamento sul telefono",
     "legal": "Game Boy è citato solo per indicare la compatibilità. Tutti i marchi appartengono ai rispettivi proprietari.",
     "exit": "Esci dalla demo",
-    "trailer": "Guarda il trailer di lancio ↗"
+    "trailer": "Guarda il trailer di lancio ↗",
+    "skipToContent": "Vai al contenuto"
   },
   "es": {
-    "language": "Idioma",
+    "language": "Idioma de la interfaz",
     "eyebrow": "Demo en el navegador",
     "heading": "Tu aventura Bitcoin empieza aquí.",
     "intro": "Explora el aeropuerto y la primera ciudad. La demo termina al salir de la ciudad.",
@@ -109,10 +112,11 @@
     "phone": "Abre el pago en tu móvil",
     "legal": "Game Boy se menciona únicamente para indicar compatibilidad. Todas las marcas pertenecen a sus respectivos propietarios.",
     "exit": "Salir de la demo",
-    "trailer": "Ver el tráiler de lanzamiento ↗"
+    "trailer": "Ver el tráiler de lanzamiento ↗",
+    "skipToContent": "Ir al contenido"
   },
   "fr": {
-    "language": "Langue",
+    "language": "Langue de l’interface",
     "eyebrow": "Démo dans le navigateur",
     "heading": "Votre aventure Bitcoin commence ici.",
     "intro": "Explorez l’aéroport et la première ville. La démo se termine lorsque vous quittez la ville.",
@@ -137,10 +141,11 @@
     "phone": "Ouvrir le paiement sur votre téléphone",
     "legal": "Game Boy est mentionné uniquement pour indiquer la compatibilité. Toutes les marques appartiennent à leurs propriétaires respectifs.",
     "exit": "Quitter la démo",
-    "trailer": "Voir la bande-annonce de sortie ↗"
+    "trailer": "Voir la bande-annonce de sortie ↗",
+    "skipToContent": "Aller au contenu"
   },
   "nl": {
-    "language": "Taal",
+    "language": "Taal van de interface",
     "eyebrow": "Browserdemo",
     "heading": "Je Bitcoin-avontuur begint hier.",
     "intro": "Verken het vliegveld en de eerste stad. De demo eindigt wanneer je de stad verlaat.",
@@ -165,10 +170,11 @@
     "phone": "Open de betaalpagina op je telefoon",
     "legal": "Game Boy wordt alleen genoemd om compatibiliteit aan te geven. Alle handelsmerken behoren toe aan hun eigenaren.",
     "exit": "Demo afsluiten",
-    "trailer": "Bekijk de releasetrailer ↗"
+    "trailer": "Bekijk de releasetrailer ↗",
+    "skipToContent": "Naar de inhoud"
   },
   "fi": {
-    "language": "Kieli",
+    "language": "Käyttöliittymän kieli",
     "eyebrow": "Selaindemo",
     "heading": "Bitcoin-seikkailusi alkaa tästä.",
     "intro": "Tutki lentokenttää ja ensimmäistä kaupunkia. Demo päättyy, kun poistut kaupungista.",
@@ -193,10 +199,11 @@
     "phone": "Avaa maksusivu puhelimella",
     "legal": "Game Boy mainitaan vain yhteensopivuuden kuvaamiseksi. Kaikki tavaramerkit kuuluvat omistajilleen.",
     "exit": "Lopeta demo",
-    "trailer": "Katso julkaisutraileri ↗"
+    "trailer": "Katso julkaisutraileri ↗",
+    "skipToContent": "Siirry sisältöön"
   },
   "ja": {
-    "language": "言語",
+    "language": "表示言語",
     "eyebrow": "ブラウザー体験版",
     "heading": "ビットコインの冒険が、ここから始まる。",
     "intro": "空港と最初の街を探索しよう。街を出ると体験版は終了します。",
@@ -221,10 +228,11 @@
     "phone": "スマートフォンで購入ページを開く",
     "legal": "Game Boyは互換性を示すためにのみ記載しています。すべての商標は各所有者に帰属します。",
     "exit": "体験版を終了",
-    "trailer": "発売トレーラーを見る ↗"
+    "trailer": "発売トレーラーを見る ↗",
+    "skipToContent": "本文へ移動"
   },
   "ko": {
-    "language": "언어",
+    "language": "화면 언어",
     "eyebrow": "브라우저 데모",
     "heading": "비트코인 모험이 여기서 시작됩니다.",
     "intro": "공항과 첫 번째 마을을 탐험하세요. 마을을 떠나면 데모가 끝납니다.",
@@ -249,6 +257,7 @@
     "phone": "휴대폰에서 결제 페이지 열기",
     "legal": "Game Boy는 호환성을 설명하기 위해서만 언급됩니다. 모든 상표는 해당 소유자에게 속합니다.",
     "exit": "데모 종료",
-    "trailer": "출시 트레일러 보기 ↗"
+    "trailer": "출시 트레일러 보기 ↗",
+    "skipToContent": "본문으로 이동"
   }
 }
