@@ -3,17 +3,20 @@ Hero of Bitcoin — browser and offline demo
 
 ```bash
 npm ci
-npm run verify
+HOB_DEMO_ROM_DIR=/absolute/path/to/hash-bound/demo-roms npm run verify
 python3 -m http.server 8080
 ```
 
 Open <http://127.0.0.1:8080>. `npm run build` regenerates `index.html` from
 `src/`, the central settings in `config/demo.json`, and the bounded demo ROMs
-listed in `rom/demo-manifest.json`. Build tools and dependencies are not needed
+listed in `rom/demo-manifest.json`. The generated 1.0.2a ROMs stay outside Git.
+Set `HOB_DEMO_ROM_DIR` to the bounded `hob-launcher` build output matching that
+manifest; the build rejects different hashes or sizes. The original tracked
+ROMs remain historical fixtures. Build tools and dependencies are not needed
 by players.
 
 The interface supports English, Spanish, Italian, Japanese, German, Korean,
-French, Dutch and Finnish. The game selector offers English, Dutch and Finnish;
+French, Dutch and Finnish. The game selector offers English, Dutch, Finnish and Italian;
 interface language and game language can be selected separately. Other game
 languages require their own bounded ROM and gameplay acceptance before enabling.
 

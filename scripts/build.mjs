@@ -2,6 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { deflateSync } from 'node:zlib';
 import { createRequire } from 'node:module';
+import { readDemoRom } from './rom-inputs.mjs';
 const root = new URL('../', import.meta.url);
 const read = (path, encoding = 'utf8') => readFile(new URL(path, root), encoding);
 const config = JSON.parse(await read('config/demo.json'));
@@ -17,7 +18,7 @@ const games = {};
 for (const language of config.gameLanguages) {
   const entry = manifest.roms.find((record) => record.language === language);
   if (!entry || !entry.title.startsWith('HOBDEMO') || entry.retained_scene_ids.length !== 25 || entry.retained_scene_ids.includes(manifest.endpoint.next_scene_id)) throw Error('Unbounded or absent demo: ' + language);
-  const data = await read('rom/' + entry.filename, null);
+  const data = await readDemoRom(entry);
   if (data.length !== entry.size || createHash('sha256').update(data).digest('hex') !== entry.sha256) throw Error('Demo ROM identity changed: ' + language);
   games[language] = { ...entry, payload: deflateSync(data, { level: 9 }).toString('base64') };
 }

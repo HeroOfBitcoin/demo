@@ -4,6 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { inflateSync } from 'node:zlib';
 import vm from 'node:vm';
 import test from 'node:test';
+import { readDemoRom } from '../scripts/rom-inputs.mjs';
 const root = new URL('../', import.meta.url);
 const read = (path, encoding='utf8') => readFile(new URL(path, root), encoding);
 const index = await read('index.html');
@@ -21,7 +22,7 @@ test('emulator and compression vendor sources stay identical to the previous pla
 test('bounded game payloads match the imported language-specific ROMs and exclude later scenes', async () => {
   assert.deepEqual(Object.keys(games), config.gameLanguages);
   for (const entry of manifest.roms) {
-    const data = await read('rom/'+entry.filename, null);
+    const data = await readDemoRom(entry);
     const embedded = inflateSync(Buffer.from(games[entry.language].payload, 'base64'));
     assert.deepEqual(embedded, data);
     assert.equal(data.length, 524288);

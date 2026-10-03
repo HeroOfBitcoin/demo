@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "edition": "demo",
-  "game_version": "1.0.1z",
+  "game_version": "1.0.2a",
   "demo_revision": 2,
-  "pipeline_commit": "8bcb8dd1c31b3e868af3225312877a12d0611662",
-  "builder_sha256": "8d35f34969ed8586b99b84250f920267fb671447742f5dc3de16a811750f7c79",
-  "contract_sha256": "d829cdb3a5b64b940abd93fdcf8c41d3cc2f429a75a4d13da31441204e6bac68",
+  "pipeline_commit": "0c818739a7fe97607797443d9fcee2de633eeb89",
+  "builder_sha256": "e836784931da3d1b1bf83e000b748913d5dd07ad81e0ba6c2eea009de7bd15da",
+  "contract_sha256": "2f59419c33774602086df0d95690b19c674229d4d2aa679a8e55e08133c68662",
   "compiler": {
     "source_version": "4.3.2",
     "commit": "ccb891b2670134ba8237416772eea4ed09d34e1e",
@@ -29,7 +29,7 @@
   },
   "roms": [
     {
-      "filename": "hero-of-bitcoin-demo-v1.0.1z-r2-en.gb",
+      "filename": "hero-of-bitcoin-demo-v1.0.2a-r2-en.gb",
       "size": 524288,
       "title": "HOBDEMOEN",
       "sha256": "3ec6637a752b53e00390a54c831a3fe5f6feb2fa12c436672ef1b642180b2471",
@@ -45,7 +45,7 @@
       },
       "language": "en",
       "purchase_url": "https://heroofbitcoin.xyz/digital/?lang=en&source=demo",
-      "project_sha256": "4624bb4f88b42233b55b3f0cddcc523022a831ae26c160ec7e0875ff86c0afa8",
+      "project_sha256": "35bd6facb7a8e7706cde5a2a00e2f1facb114764f8fe19c504822d5bc928f3e9",
       "completion_image_sha256": "ce227b717f5830388aa7ff10fb7104ef685dee4793923ebac76a90222d9e9559",
       "retained_scene_ids": [
         "382961a1-e615-4b92-92a7-f1a791b50b7a",
@@ -72,12 +72,12 @@
         "03fa4816-5344-4c89-a3c0-8eab3259fb71",
         "44563fa5-5bc7-4fee-bfa5-ca1e61628588",
         "ca2aac45-4643-4363-8353-19985c761adf",
-        "ae56e5bf-8c6b-57c1-9b4a-7935106031b8"
+        "784bfdce-eae4-53ba-8f7a-08d1e86e533f"
       ],
       "custom_events": 5
     },
     {
-      "filename": "hero-of-bitcoin-demo-v1.0.1z-r2-nl.gb",
+      "filename": "hero-of-bitcoin-demo-v1.0.2a-r2-nl.gb",
       "size": 524288,
       "title": "HOBDEMONL",
       "sha256": "d5124a06e99d48e8b5ef7050be10b89557c866480f0c90958b135efe457d7723",
@@ -93,7 +93,7 @@
       },
       "language": "nl",
       "purchase_url": "https://heroofbitcoin.xyz/digital/?lang=nl&source=demo",
-      "project_sha256": "35758adece444e14dca196fb21884ad84b1aa194234a33a6f6ebba593f4d9538",
+      "project_sha256": "9664796bcf7f014363dfcc59bcec3ff86d0e2a2efaa7d5440ed9558b372acaab",
       "completion_image_sha256": "c1da0115802bddc3ee8416573b4e3784ef53ccd21efbdc6ea7b49b747914aa63",
       "retained_scene_ids": [
         "382961a1-e615-4b92-92a7-f1a791b50b7a",
@@ -120,12 +120,12 @@
         "03fa4816-5344-4c89-a3c0-8eab3259fb71",
         "44563fa5-5bc7-4fee-bfa5-ca1e61628588",
         "ca2aac45-4643-4363-8353-19985c761adf",
-        "ae56e5bf-8c6b-57c1-9b4a-7935106031b8"
+        "784bfdce-eae4-53ba-8f7a-08d1e86e533f"
       ],
       "custom_events": 5
     },
     {
-      "filename": "hero-of-bitcoin-demo-v1.0.1z-r2-fi.gb",
+      "filename": "hero-of-bitcoin-demo-v1.0.2a-r2-fi.gb",
       "size": 524288,
       "title": "HOBDEMOFI",
       "sha256": "9695bad6b0033d577a5066ff03fe042cd239987348938cc1bc2281330abf832f",
@@ -141,7 +141,7 @@
       },
       "language": "fi",
       "purchase_url": "https://heroofbitcoin.xyz/digital/?lang=fi&source=demo",
-      "project_sha256": "878ac1db2239756a303f15e400a7c350ea468e04295fc3fe0bee7df619b5a4b8",
+      "project_sha256": "dd5c45abb1430e6cd8d8275fef7c7b3a9c1b31c2eceb51fed7bfba5a69820e03",
       "completion_image_sha256": "43b27c5265f1db835a6332a142724919094dc63a152ace0efb10d961d3b5a586",
       "retained_scene_ids": [
         "382961a1-e615-4b92-92a7-f1a791b50b7a",
@@ -168,7 +168,55 @@
         "03fa4816-5344-4c89-a3c0-8eab3259fb71",
         "44563fa5-5bc7-4fee-bfa5-ca1e61628588",
         "ca2aac45-4643-4363-8353-19985c761adf",
-        "ae56e5bf-8c6b-57c1-9b4a-7935106031b8"
+        "784bfdce-eae4-53ba-8f7a-08d1e86e533f"
+      ],
+      "custom_events": 5
+    },
+    {
+      "filename": "hero-of-bitcoin-demo-v1.0.2a-r2-it.gb",
+      "size": 524288,
+      "title": "HOBDEMOIT",
+      "sha256": "0e939922d01129fdbaa4d76864b7fdbc6773149c9d31d5c7ebae6029e2d87c02",
+      "save_schema": "hero-of-bitcoin/demo-save-schema-v1/it",
+      "save_signature": "0x970B5805",
+      "completion_signal": {
+        "address": 50221,
+        "width_bytes": 2,
+        "value": 1,
+        "byte_order": "little",
+        "symbol": "VAR_DEMO_COMPLETED",
+        "symbols_sha256": "b1fe58ca1cdf698d8bc13113bb4242eeaacfde36650188b76e68adfb67f5fea3"
+      },
+      "language": "it",
+      "purchase_url": "https://heroofbitcoin.xyz/digital/?lang=it&source=demo",
+      "project_sha256": "e948b54bf28032347dd73cf86a83a835529155959fd2bf95d16bf86111146ce1",
+      "completion_image_sha256": "2d880079e0aac7f0f3be36b371ff774f6528fcb70586ef7f1bab5c5da109d25f",
+      "retained_scene_ids": [
+        "382961a1-e615-4b92-92a7-f1a791b50b7a",
+        "4912bee2-387a-472f-ae4f-6679b6149517",
+        "337686c7-1198-4cdd-a19e-8891819a64d6",
+        "d40585c7-c16f-4dd7-b0f4-8d370e5d55c1",
+        "564c5a16-60e1-4441-aebc-7fc96b9465e3",
+        "7d626a61-d6c4-44a7-9ae8-02375da64e79",
+        "81c69001-c069-4d4f-81a3-a8ff094174bf",
+        "9ad6401e-e4b5-4c98-8ad5-4a4a472bb096",
+        "0e9fec62-a54b-4016-a03e-6e55ab3d9bf4",
+        "1fb4a537-2752-4a41-83ea-225398c91443",
+        "25467586-22ae-4e29-acf2-fd2d4fd6bc3e",
+        "9cf21f4c-da24-4dca-9f5a-a15924e95862",
+        "5aa7ea55-0ed6-45c8-9039-9bd46b5551c3",
+        "f9483d90-71aa-4fb2-9942-48f8a9db50ad",
+        "3014c076-704f-41b8-b727-ead3560ae55d",
+        "d6b4187c-84ef-4231-bf30-64ed043918da",
+        "30cbac01-9bd6-4ec8-a90e-53e3c5ceb3b7",
+        "3de6bbaa-a112-4fd8-bacf-a4d79c11fe33",
+        "fb7c58a9-4200-42b4-a5cf-bf9998c7ed24",
+        "57a2f6c6-cb93-41e0-a128-bdada675c5da",
+        "a2cf2878-08c0-4b24-bcc9-b321f2ace272",
+        "03fa4816-5344-4c89-a3c0-8eab3259fb71",
+        "44563fa5-5bc7-4fee-bfa5-ca1e61628588",
+        "ca2aac45-4643-4363-8353-19985c761adf",
+        "784bfdce-eae4-53ba-8f7a-08d1e86e533f"
       ],
       "custom_events": 5
     }
