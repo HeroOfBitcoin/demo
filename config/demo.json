@@ -33,5 +33,8 @@
       "pageUrl": "https://heroofbitcoin.xyz/lugano/",
       "websiteUrl": "https://planb.lugano.ch/planb-forum/"
     }
-  }
+  },
+  "betaGameLanguages": [
+    "it"
+  ]
 }

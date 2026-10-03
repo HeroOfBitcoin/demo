@@ -14,6 +14,7 @@ const keys = Object.keys(catalog.en).sort().join();
 for (const [code, texts] of Object.entries(catalog)) {
   if (Object.keys(texts).sort().join() !== keys || Object.values(texts).some((value) => typeof value !== 'string' || !value.trim())) throw Error('Incomplete UI catalog: ' + code);
 }
+if (!Array.isArray(config.betaGameLanguages) || new Set(config.betaGameLanguages).size !== config.betaGameLanguages.length || config.betaGameLanguages.some(code => !config.gameLanguages.includes(code))) throw Error('Invalid beta game languages');
 const games = {};
 for (const language of config.gameLanguages) {
   const entry = manifest.roms.find((record) => record.language === language);

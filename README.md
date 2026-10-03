@@ -16,7 +16,7 @@ ROMs remain historical fixtures. Build tools and dependencies are not needed
 by players.
 
 The interface supports English, Spanish, Italian, Japanese, German, Korean,
-French, Dutch and Finnish. The game selector offers English, Dutch, Finnish and Italian;
+French, Dutch and Finnish. The game selector offers English, Dutch, Finnish and Italian (Beta);
 interface language and game language can be selected separately. Other game
 languages require their own bounded ROM and gameplay acceptance before enabling.
 

@@ -75,7 +75,10 @@ function applyCopy() {
   remember(demoConfig.gameLanguageStorageKey, gameLanguage);
 }
 for (const [picker, values] of [[languagePicker, demoConfig.uiLanguages], [gameLanguagePicker, demoConfig.gameLanguages]]) {
-  values.forEach((code) => picker.add(new Option(names[code], code)));
+  values.forEach((code) => {
+    const beta = picker === gameLanguagePicker && demoConfig.betaGameLanguages.includes(code);
+    picker.add(new Option(names[code] + (beta ? ' (Beta)' : ''), code));
+  });
 }
 // Release all inputs on pause, focus loss and cancellation to prevent stuck controls.
 function releaseInput() {
