@@ -42,6 +42,17 @@ button:disabled { cursor: default; opacity: .45; }
 .language-settings { flex: 0 1 380px; display: flex; flex-wrap: wrap; gap: .75rem 1.25rem; min-width: 0; }
 .language-settings label { display: grid; align-content: start; gap: .4rem; min-width: 0; flex: 1 1 9rem; font-size: .875rem; }
 .language-settings select { width: 100%; }
+.language-settings .game-language > span {
+  font-size: .75rem;
+  font-weight: 750;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+.language-settings .game-language select {
+  border-inline-start: 3px solid var(--orange);
+  background: #163b49;
+  font-weight: 650;
+}
 
 select { background: var(--ink); color: var(--cream); border: 1px solid #75929f; padding: .5rem .7rem; min-height: 44px; max-width: 100%; }
 .demo-hero { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: center; gap: 6vw; padding: 2.5rem 5vw; }
@@ -126,6 +137,69 @@ footer p { margin: .4rem 0; }
 @media (max-width: 800px) { .completion-phone { display: none; } }
 
 @media (forced-colors: active) { :is(.primary,.controls button,select,.touch-controls button) { border: 2px solid ButtonText; } :focus-visible { outline-color: Highlight; } }
+
+/* Always-visible, local-only assets for the site and the offline demo. */
+.hob-referral {
+  box-sizing: border-box;
+  flex: none;
+  width: 100%;
+  padding: 1rem max(5vw, calc((100% - 72rem) / 2));
+  background: #111917;
+  color: #e1e8e4;
+  font: normal .875rem/1.5 system-ui, sans-serif;
+  text-align: start;
+}
+.hob-referral__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  max-width: 38rem;
+  margin-inline: auto;
+  gap: .75rem 1.25rem;
+  padding: .75rem 1rem;
+  border: 1px solid #44534b;
+  background: #19231e;
+}
+.hob-referral__signup {
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  min-height: 44px;
+  max-width: 100%;
+  color: #fff6e6;
+  text-decoration: none;
+}
+.hob-referral__marks { display: inline-flex; flex: none; gap: .4rem; align-items: center; }
+.hob-referral__marks > * { display: block; width: 2.25rem; height: 2.25rem; }
+.hob-referral__brand { display: grid; gap: .1rem; min-width: 0; }
+.hob-referral__brand strong { color: #fff6e6; font: 750 1rem/1.2 system-ui, sans-serif; }
+.hob-referral__cta, .hob-referral__copy a { color: #ffd49a; text-decoration: underline; text-underline-offset: .2em; }
+.hob-referral__cta { width: fit-content; font-size: .8125rem; font-weight: 650; }
+.hob-referral__copy { margin: .45rem 0 0; color: inherit; }
+.hob-referral__qr { display: block; width: 111px; height: 111px; image-rendering: pixelated; }
+.hob-referral__signup:hover .hob-referral__cta, .hob-referral__copy a:hover { color: #fff6e6; }
+.hob-referral a:focus-visible { outline: 2px solid #ffdcab; outline-offset: 3px; }
+@media (max-width: 480px) {
+  .hob-referral__inner { gap: .6rem; padding: .65rem .7rem; }
+  .hob-referral__signup { gap: .45rem; }
+  .hob-referral__marks { gap: .3rem; }
+  .hob-referral__marks > * { width: 1.5rem; height: 1.5rem; }
+  .hob-referral__qr { width: 74px; height: 74px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hob-referral__cta, .hob-referral__copy a { transition: color .15s ease; }
+}
+.hob-referral [data-referral-copy] { display: none; }
+.hob-referral [data-referral-copy="en"] { display: inline; }
+html:is([lang="es"], [lang="it"], [lang="ja"], [lang="de"], [lang="ko"], [lang="fr"], [lang="nl"], [lang="fi"]) .hob-referral [data-referral-copy="en"] { display: none; }
+html[lang="es"] .hob-referral [data-referral-copy="es"],
+html[lang="it"] .hob-referral [data-referral-copy="it"],
+html[lang="ja"] .hob-referral [data-referral-copy="ja"],
+html[lang="de"] .hob-referral [data-referral-copy="de"],
+html[lang="ko"] .hob-referral [data-referral-copy="ko"],
+html[lang="fr"] .hob-referral [data-referral-copy="fr"],
+html[lang="nl"] .hob-referral [data-referral-copy="nl"],
+html[lang="fi"] .hob-referral [data-referral-copy="fi"] { display: inline; }
 </style>
 </head>
 <body>
@@ -186,6 +260,50 @@ footer p { margin: .4rem 0; }
   </section>
 </main>
 <footer><p>©2022–2026 Hero of Bitcoin</p><p data-copy="legal">Game Boy is named only to describe compatibility. All trademarks belong to their owners.</p></footer>
+<aside class="hob-referral" data-hob-referral aria-label="Bull Bitcoin">
+  <div class="hob-referral__inner">
+    <div class="hob-referral__body">
+      <a class="hob-referral__signup" href="https://app.bullbitcoin.com/registration/unfiat" target="_blank" rel="sponsored noopener noreferrer" referrerpolicy="no-referrer">
+        <span class="hob-referral__marks" aria-hidden="true">
+          <img src="data:image/png;base64,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" width="36" height="36" loading="lazy" decoding="async" alt="" />
+          <svg width="36" height="36" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+            <circle cx="16" cy="16" r="16" fill="#f7931a" />
+            <g transform="rotate(14 16 16)" fill="none" stroke="#fff" stroke-width="2.4">
+              <path d="M13.5 8v3m4-3v3m-4 10v3m4-3v3M10 11h8a2.5 2.5 0 0 1 0 5h-5.5m-2.5 5h8.5a2.5 2.5 0 0 0 0-5M12.5 11v10"/>
+            </g>
+          </svg>
+        </span>
+        <span class="hob-referral__brand">
+          <strong>Bull Bitcoin</strong>
+          <span class="hob-referral__cta">
+            <span lang="en" data-referral-copy="en">Sign up</span>
+            <span lang="es" data-referral-copy="es">Regístrate</span>
+            <span lang="it" data-referral-copy="it">Registrati</span>
+            <span lang="ja" data-referral-copy="ja">登録する</span>
+            <span lang="de" data-referral-copy="de">Registrieren</span>
+            <span lang="ko" data-referral-copy="ko">가입하기</span>
+            <span lang="fr" data-referral-copy="fr">S’inscrire</span>
+            <span lang="nl" data-referral-copy="nl">Registreren</span>
+            <span lang="fi" data-referral-copy="fi">Rekisteröidy</span>
+            <span aria-hidden="true">↗</span>
+          </span>
+        </span>
+      </a>
+      <p class="hob-referral__copy">
+        <span lang="en" data-referral-copy="en">Get a 0.25% discount on Bull Bitcoin’s <a href="https://www.bullbitcoin.com/rates" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">fees</a> with this link.</span>
+        <span lang="es" data-referral-copy="es">Con este enlace, obtienes un 0,25 % de descuento en las <a href="https://www.bullbitcoin.com/rates" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">comisiones</a> de Bull Bitcoin.</span>
+        <span lang="it" data-referral-copy="it">Con questo link hai uno sconto dello 0,25% sulle <a href="https://www.bullbitcoin.com/rates" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">commissioni</a> di Bull Bitcoin.</span>
+        <span lang="ja" data-referral-copy="ja">このリンクから登録すると、Bull Bitcoinの<a href="https://www.bullbitcoin.com/rates" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">手数料</a>が0.25%割引になります。</span>
+        <span lang="de" data-referral-copy="de">Mit diesem Link bekommst du 0,25 % Rabatt auf die <a href="https://www.bullbitcoin.com/rates" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Gebühren</a> von Bull Bitcoin.</span>
+        <span lang="ko" data-referral-copy="ko">이 링크로 가입하면 Bull Bitcoin <a href="https://www.bullbitcoin.com/rates" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">수수료</a>를 0.25% 할인받을 수 있어요.</span>
+        <span lang="fr" data-referral-copy="fr">Ce lien vous donne droit à une réduction de 0,25 % sur les <a href="https://www.bullbitcoin.com/rates" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">frais</a> de Bull Bitcoin.</span>
+        <span lang="nl" data-referral-copy="nl">Met deze link krijg je 0,25% korting op de <a href="https://www.bullbitcoin.com/rates" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">kosten</a> van Bull Bitcoin.</span>
+        <span lang="fi" data-referral-copy="fi">Tällä linkillä saat 0,25 % alennusta Bull Bitcoinin <a href="https://www.bullbitcoin.com/rates" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">maksuista</a>.</span>
+      </p>
+    </div>
+    <img class="hob-referral__qr" src="data:image/png;base64,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" width="111" height="111" loading="lazy" decoding="async" alt="" />
+  </div>
+</aside>
 <noscript>Enable JavaScript to play the demo.</noscript>
 <!-- 3. Offline export stores the selected UI/game languages here, without changing ROMs. -->
 <script id="offline-choice" type="application/json">{}</script>

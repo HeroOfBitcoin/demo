@@ -25,6 +25,17 @@ button:disabled { cursor: default; opacity: .45; }
 .language-settings { flex: 0 1 380px; display: flex; flex-wrap: wrap; gap: .75rem 1.25rem; min-width: 0; }
 .language-settings label { display: grid; align-content: start; gap: .4rem; min-width: 0; flex: 1 1 9rem; font-size: .875rem; }
 .language-settings select { width: 100%; }
+.language-settings .game-language > span {
+  font-size: .75rem;
+  font-weight: 750;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+.language-settings .game-language select {
+  border-inline-start: 3px solid var(--orange);
+  background: #163b49;
+  font-weight: 650;
+}
 
 select { background: var(--ink); color: var(--cream); border: 1px solid #75929f; padding: .5rem .7rem; min-height: 44px; max-width: 100%; }
 .demo-hero { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: center; gap: 6vw; padding: 2.5rem 5vw; }

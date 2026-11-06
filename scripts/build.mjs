@@ -29,8 +29,13 @@ const notices = await Promise.all(['inter', 'pako', 'zlib', 'qrcode-generator'].
 const dataUrl = async (path, type) => 'data:' + type + ';base64,' + (await read(path, null)).toString('base64');
 let styles = await read('src/demo.css');
 styles = styles.replace('{{FONT_LATIN}}', await dataUrl('src/assets/inter-latin.woff2', 'font/woff2')).replace('{{FONT_EXT}}', await dataUrl('src/assets/inter-latin-ext.woff2', 'font/woff2'));
+styles += '\n' + await read('src/referral/notice.css');
+const referral = (await read('src/referral/notice.html')).trimEnd()
+  .replace('@@HOB_REFERRAL_BULL@@', await dataUrl('src/referral/bull-bitcoin.png', 'image/png'))
+  .replace('@@HOB_REFERRAL_QR@@', await dataUrl('src/referral/bullbitcoin-qr.png', 'image/png'));
 const emulator = `(function(localStorage) {\n${await read('src/vendor/emulator.js')}\nwindow.HobEmulator = { GameBoy, Display, Sound };\n})(demoSaveStorage);`;
 const substitutions = {
+  REFERRAL: referral,
   PLANB: await dataUrl('src/assets/planb-forum-2026.svg', 'image/svg+xml'), STYLES: styles, LOGO: await dataUrl('src/assets/logo.webp', 'image/webp'), AIRPORT: await dataUrl('src/assets/airport.png', 'image/png'), COMPLETION_ART: await dataUrl('src/assets/completion-art.png', 'image/png'),
   FAVICON: (await read('favicon.ico', null)).toString('base64'), PAKO: await read('src/vendor/pako.js'), EMULATOR: emulator,
   STORAGE: await read('src/storage.js'), QR: qr, CONFIG: JSON.stringify(config), CATALOG: JSON.stringify(catalog), GAMES: JSON.stringify(games), PLAYER: await read('src/player.js'),
